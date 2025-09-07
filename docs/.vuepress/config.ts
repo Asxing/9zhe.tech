@@ -23,10 +23,10 @@ export default defineUserConfig({
     },
 
     plugins: {
-      // 完全禁用git插件避免构建错误
-      git: false,
-      // 关闭资源替换插件，避免对生成代码产生意外文本替换
-      replaceAssets: false
+      // 通过环境变量按需开启，便于逐步排查
+      // 在 CI 或本地设置：VP_ENABLE_GIT=true / VP_ENABLE_REPLACE_ASSETS=true
+      git: process.env.VP_ENABLE_GIT === 'true',
+      replaceAssets: process.env.VP_ENABLE_REPLACE_ASSETS === 'true'
     },
 
     // 简化博客配置
