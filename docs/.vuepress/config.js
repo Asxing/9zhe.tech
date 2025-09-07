@@ -25,7 +25,7 @@ module.exports = {
         nav,
         sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
         logo: '/img/logo.png', // 导航栏logo
-        repo: 'holddie', // 导航栏右侧生成Github链接
+        repo: 'Asxing', // 导航栏右侧生成Github链接
         searchMaxSuggestions: 10, // 搜索结果显示最大数
         lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
         docsDir: 'docs', // 编辑的文件夹
@@ -61,12 +61,12 @@ module.exports = {
         sidebar: 'structuring', // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
 
         author: { // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
-            name: 'holddie', // 必需
-            link: 'https://github.com/holddie' // 可选的
+            name: 'Asxing', // 必需
+            link: 'https://github.com/Asxing' // 可选的
         },
         blogger: { // 博主信息，显示在首页侧边栏
-            avatar: 'https://cdn.jsdelivr.net/gh/HoldDie/img/20201204131346.jpg',
-            name: 'HoldDie',
+            avatar: 'https://github.com/Asxing.png',
+            name: 'Asxing',
             slogan: '长期有耐心，一切才刚刚开始！'
         },
         social: { // 社交图标，显示于博主信息栏和页脚栏
@@ -80,7 +80,7 @@ module.exports = {
                 {
                     iconClass: 'icon-github',
                     title: 'GitHub',
-                    link: 'https://github.com/holddie'
+                    link: 'https://github.com/Asxing'
                 },
                 {
                     iconClass: 'icon-erji',
@@ -91,7 +91,7 @@ module.exports = {
         },
         footer: { // 页脚信息
             createYear: 2019, // 博客创建年份
-            copyrightInfo: 'HoldDie | <a href="https://github.com/holddie/9zhe.tech/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
+            copyrightInfo: 'Asxing | <a href="https://github.com/Asxing/9zhe.tech/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
         }
     },
     plugins: [ // 插件
@@ -176,8 +176,8 @@ module.exports = {
                     clientID: 'a0bbecf67d8ee3a18a07',
                     clientSecret: '000d754614933ed55fdafc50c43664975533a66b',
                     repo: '9zhe.tech', // GitHub 仓库
-                    owner: 'holddie', // GitHub仓库所有者
-                    admin: ['holddie'], // 对仓库有写权限的人
+                    owner: 'Asxing', // GitHub仓库所有者
+                    admin: ['Asxing'], // 对仓库有写权限的人
                     // distractionFreeMode: true,
                     pagerDirection: 'last', // 'first'正序 | 'last'倒序
                     id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>", //  页面的唯一标识,长度不能超过50
