@@ -18,9 +18,8 @@ export default defineUserConfig({
     profile: {
       avatar: 'https://avatars.githubusercontent.com/u/22816271?v=4',
       name: 'Asxing',
-      description: '路虽远，行则将至；事虽难，做则必成。',
-      location: 'China',
-      organization: '九折技术',
+      description: '路虽远，行则将至；事虽难，做则必成。'
+      // 首页不展示位置与组织
     },
 
     plugins: {
@@ -41,16 +40,20 @@ export default defineUserConfig({
 
     navbar: [
       { text: '首页', link: '/' },
-      { text: 'AI技术', link: '/blog/categories/ai/' },
+      {
+        text: 'AI技术',
+        link: '/blog/categories/ai/',
+        children: [
+          { text: 'Claude', link: '/blog/tags/claude/' }
+        ]
+      },
       { text: '后端技术', link: '/blog/categories/backend/' },
       { text: '架构设计', link: '/blog/categories/architecture/' },
       { text: '关于', link: '/about/' },
       { text: '友链', link: '/friends/' }
     ],
 
-    social: [
-      { icon: 'github', link: 'https://github.com/Asxing' }
-    ],
+    // 首页不展示社交链接
 
     footer: {
       message: 'Released under the <a href="https://github.com/Asxing/9zhe.tech/blob/master/LICENSE">MIT License</a>.',

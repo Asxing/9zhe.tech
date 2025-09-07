@@ -5,6 +5,7 @@ category:
   - AI
   - Claude
 tag:
+  - Claude
   - 插件开发
   - API集成
   - 自动化
