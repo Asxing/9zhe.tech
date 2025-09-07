@@ -3,8 +3,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { plumeTheme } from 'vuepress-theme-plume'
 
 export default defineUserConfig({
-  title: '九折技术',
-  description: '前端,后端,架构,软件开发 - 现代化技术博客',
+  title: '面试造飞机-九折技术',
+  description: 'ai,后端,架构,软件开发',
   lang: 'zh-CN',
   base: '/',
   
