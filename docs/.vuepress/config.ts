@@ -42,13 +42,25 @@ export default defineUserConfig({
       { text: '首页', link: '/' },
       {
         text: 'AI技术',
-        link: '/blog/categories/ai/',
+        link: '/ai/',
         children: [
-          { text: 'Claude', link: '/blog/tags/claude/' }
+          { text: 'Claude', link: '/ai/claude/' }
         ]
       },
-      { text: '后端技术', link: '/blog/categories/backend/' },
-      { text: '架构设计', link: '/blog/categories/architecture/' },
+      {
+        text: '后端技术',
+        link: '/backend/',
+        children: [
+          { text: 'Java', link: '/backend/java/' }
+        ]
+      },
+      {
+        text: '架构设计',
+        link: '/architecture/',
+        children: [
+          { text: '微服务', link: '/architecture/microservices/' }
+        ]
+      },
       { text: '关于', link: '/about/' },
       { text: '友链', link: '/friends/' }
     ],
