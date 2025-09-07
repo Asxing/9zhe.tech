@@ -11,7 +11,7 @@ export default defineUserConfig({
   bundler: viteBundler(),
   
   plugins: [
-    // 临时禁用git插件来调试构建问题
+    // git插件由Plume主题自动包含，在主题配置中处理
   ],
   
   theme: plumeTheme({
@@ -21,6 +21,11 @@ export default defineUserConfig({
       description: '路虽远，行则将至；事虽难，做则必成。',
       location: 'China',
       organization: '九折技术',
+    },
+
+    plugins: {
+      // 完全禁用git插件避免构建错误
+      git: false
     },
 
     // 简化博客配置
