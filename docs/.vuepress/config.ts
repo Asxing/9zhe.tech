@@ -19,11 +19,104 @@ export default defineUserConfig({
       organization: '九折技术',
     },
 
+    // 配置博客以包含所有文章（包括notes中的）
+    blog: {
+      include: ['**/*.md'], // 包含所有 markdown 文件
+      exclude: ['.vuepress/', 'node_modules/', '**/README.md', 'about.md', 'friends.md'], // 排除配置文件和特殊页面
+      pagination: {
+        perPage: 10
+      },
+      postList: true,
+      tags: true,
+      link: '/blog/'
+    },
+
+    // 配置 notes 以支持技术文档导航
+    notes: {
+      dir: '/notes/', // 笔记保存目录
+      link: '/', // 笔记链接前缀
+      notes: [
+        {
+          dir: 'ai/claude',
+          link: '/notes/ai/claude/',
+          text: 'Claude AI',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'ai/llm',
+          link: '/notes/ai/llm/',
+          text: 'LLM大模型',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'ai/ml',
+          link: '/notes/ai/ml/',
+          text: '机器学习',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'ai/dl',
+          link: '/notes/ai/dl/',
+          text: '深度学习',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'ai/engineering',
+          link: '/notes/ai/engineering/',
+          text: 'AI工程化',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'backend/java',
+          link: '/notes/backend/java/',
+          text: 'Java',
+          sidebar: 'auto'  
+        },
+        {
+          dir: 'backend/go',
+          link: '/notes/backend/go/',
+          text: 'Go',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'backend/python',
+          link: '/notes/backend/python/',
+          text: 'Python',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'backend/database',
+          link: '/notes/backend/database/',
+          text: '数据库',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'architecture/microservices',
+          link: '/notes/architecture/microservices/',
+          text: '微服务',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'architecture/kubernetes',
+          link: '/notes/architecture/kubernetes/',
+          text: 'Kubernetes',
+          sidebar: 'auto'
+        },
+        {
+          dir: 'architecture/system-design',
+          link: '/notes/architecture/system-design/',
+          text: '系统设计',
+          sidebar: 'auto'
+        }
+      ]
+    },
+
     navbar: [
       { text: '首页', link: '/' },
       { 
         text: 'AI技术',
         items: [
+          { text: 'Claude', link: '/notes/ai/claude/' },
           { text: 'LLM大模型', link: '/notes/ai/llm/' },
           { text: '机器学习', link: '/notes/ai/ml/' },
           { text: '深度学习', link: '/notes/ai/dl/' },
