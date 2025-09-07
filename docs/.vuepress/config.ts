@@ -10,6 +10,10 @@ export default defineUserConfig({
   
   bundler: viteBundler(),
   
+  plugins: [
+    // 临时禁用git插件来调试构建问题
+  ],
+  
   theme: plumeTheme({
     profile: {
       avatar: 'https://avatars.githubusercontent.com/u/22816271?v=4',
@@ -19,127 +23,20 @@ export default defineUserConfig({
       organization: '九折技术',
     },
 
-    // 配置博客以包含所有文章（包括notes中的）
+    // 简化博客配置
     blog: {
-      include: ['**/*.md'], // 包含所有 markdown 文件
-      exclude: ['.vuepress/', 'node_modules/', '**/README.md', 'about.md', 'friends.md'], // 排除配置文件和特殊页面
-      pagination: {
-        perPage: 10
-      },
       postList: true,
       tags: true,
-      link: '/' // 🔧 修复：博客文章显示在首页
+      link: '/'
     },
 
-    // 配置 notes 以支持技术文档导航
-    notes: {
-      dir: '/notes/', // 笔记保存目录
-      link: '/notes/', // 🔧 修复：避免与博客首页冲突
-      notes: [
-        {
-          dir: 'ai/claude',
-          link: '/notes/ai/claude/',
-          text: 'Claude AI',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'ai/llm',
-          link: '/notes/ai/llm/',
-          text: 'LLM大模型',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'ai/ml',
-          link: '/notes/ai/ml/',
-          text: '机器学习',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'ai/dl',
-          link: '/notes/ai/dl/',
-          text: '深度学习',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'ai/engineering',
-          link: '/notes/ai/engineering/',
-          text: 'AI工程化',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'backend/java',
-          link: '/notes/backend/java/',
-          text: 'Java',
-          sidebar: 'auto'  
-        },
-        {
-          dir: 'backend/go',
-          link: '/notes/backend/go/',
-          text: 'Go',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'backend/python',
-          link: '/notes/backend/python/',
-          text: 'Python',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'backend/database',
-          link: '/notes/backend/database/',
-          text: '数据库',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'architecture/microservices',
-          link: '/notes/architecture/microservices/',
-          text: '微服务',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'architecture/kubernetes',
-          link: '/notes/architecture/kubernetes/',
-          text: 'Kubernetes',
-          sidebar: 'auto'
-        },
-        {
-          dir: 'architecture/system-design',
-          link: '/notes/architecture/system-design/',
-          text: '系统设计',
-          sidebar: 'auto'
-        }
-      ]
-    },
+    // 移除notes配置，现在使用技术领域分类的博客结构
 
     navbar: [
       { text: '首页', link: '/' },
-      { 
-        text: 'AI技术',
-        items: [
-          { text: 'Claude', link: '/notes/ai/claude/' },
-          { text: 'LLM大模型', link: '/notes/ai/llm/' },
-          { text: '机器学习', link: '/notes/ai/ml/' },
-          { text: '深度学习', link: '/notes/ai/dl/' },
-          { text: 'AI工程化', link: '/notes/ai/engineering/' }
-        ]
-      },
-      {
-        text: '后端技术',
-        items: [
-          { text: 'Java', link: '/notes/backend/java/' },
-          { text: 'Go', link: '/notes/backend/go/' },
-          { text: 'Python', link: '/notes/backend/python/' },
-          { text: '数据库', link: '/notes/backend/database/' }
-        ]
-      },
-      {
-        text: '架构设计',
-        items: [
-          { text: '微服务', link: '/notes/architecture/microservices/' },
-          { text: 'Kubernetes', link: '/notes/architecture/kubernetes/' },
-          { text: '系统设计', link: '/notes/architecture/system-design/' }
-        ]
-      },
+      { text: 'AI技术', link: '/blog/categories/ai/' },
+      { text: '后端技术', link: '/blog/categories/backend/' },
+      { text: '架构设计', link: '/blog/categories/architecture/' },
       { text: '关于', link: '/about/' },
       { text: '友链', link: '/friends/' }
     ],
