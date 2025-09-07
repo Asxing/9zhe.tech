@@ -12,9 +12,9 @@ export default defineUserConfig({
   
   theme: plumeTheme({
     profile: {
-      avatar: 'https://avatars.githubusercontent.com/u/17307293?v=4',
+      avatar: 'https://avatars.githubusercontent.com/u/22816271?v=4',
       name: 'Asxing',
-      description: '长期有耐心，一切才刚刚开始！',
+      description: '路虽远，行则将至；事虽难，做则必成。',
       location: 'China',
       organization: '九折技术',
     },
