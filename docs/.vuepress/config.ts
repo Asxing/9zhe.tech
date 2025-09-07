@@ -6,7 +6,7 @@ export default defineUserConfig({
   title: '九折技术',
   description: '前端,后端,架构,软件开发 - 现代化技术博客',
   lang: 'zh-CN',
-  base: '/9zhe.tech/',
+  base: '/',
   
   bundler: viteBundler(),
   
