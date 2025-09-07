@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "node --max-old-space-size=4096 --openssl-legacy-provider ./node_modules/.bin/vuepress build docs",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider --max-old-space-size=4096' vuepress build docs",
     "deploy": "bash deploy.sh",
     "autoGitTalk": "node utils/genSiteMap.js && node utils/autoInitGitTalk.js",
     "editFm": "node utils/editFrontmatter.js",
