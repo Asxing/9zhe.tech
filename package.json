@@ -1,35 +1,31 @@
 {
-  "name": "theme-vdoing-blog",
-  "version": "1.0.0",
+  "name": "jiuzhe-tech-blog-plume",
+  "version": "2.0.0",
+  "description": "九折技术 - 基于Plume主题的现代化博客",
+  "private": true,
+  "author": {
+    "name": "Asxing",
+    "email": "holddie@qq.com",
+    "url": "https://github.com/Asxing"
+  },
+  "homepage": "https://9zhe.tech",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Asxing/9zhe.tech.git"
+  },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "NODE_OPTIONS='--openssl-legacy-provider --max-old-space-size=4096' vuepress build docs",
-    "deploy": "bash deploy.sh",
-    "autoGitTalk": "node utils/genSiteMap.js && node utils/autoInitGitTalk.js",
-    "editFm": "node utils/editFrontmatter.js",
-    "baiduPush": "node utils/baiduPush.js https://9zhe.tech && bash baiduPush.sh",
-    "publish": "cd theme-vdoing && npm publish && cd ../ && npm uninstall vuepress-theme-vdoing && npm i vuepress-theme-vdoing -D"
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' vuepress dev docs",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' vuepress build docs",
+    "docs:dev": "NODE_OPTIONS='--openssl-legacy-provider' vuepress dev docs", 
+    "docs:build": "NODE_OPTIONS='--openssl-legacy-provider' vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
-  "license": "MIT",
   "devDependencies": {
-    "inquirer": "^7.1.0",
-    "json2yaml": "^1.1.0",
-    "moment": "^2.25.3",
-    "request": "^2.88.2",
-    "vuepress": "1.5.2",
-    "vuepress-plugin-baidu-autopush": "^1.0.1",
-    "vuepress-plugin-baidu-tongji": "^1.0.1",
-    "vuepress-plugin-demo-block": "^0.7.2",
-    "vuepress-plugin-one-click-copy": "^1.0.2",
-    "vuepress-plugin-thirdparty-search": "^1.0.2",
-    "vuepress-plugin-zooming": "^1.1.7",
-    "vuepress-theme-vdoing": "^1.4.1",
-    "yamljs": "^0.3.0"
+    "@vuepress/bundler-vite": "^2.0.0-rc.24",
+    "@vuepress/client": "^2.0.0-rc.24",
+    "typescript": "^5.9.2",
+    "vuepress": "^2.0.0-rc.24",
+    "vuepress-theme-plume": "^1.0.0-rc.162"
   },
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "vuepress-plugin-comment": "^0.7.3",
-    "vuepress-plugin-sitemap": "^2.3.1",
-    "xml-parser": "^1.2.1"
-  }
+  "license": "MIT"
 }
