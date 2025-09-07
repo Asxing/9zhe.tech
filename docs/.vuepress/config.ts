@@ -25,7 +25,9 @@ export default defineUserConfig({
 
     plugins: {
       // 完全禁用git插件避免构建错误
-      git: false
+      git: false,
+      // 关闭资源替换插件，避免对生成代码产生意外文本替换
+      replaceAssets: false
     },
 
     // 简化博客配置

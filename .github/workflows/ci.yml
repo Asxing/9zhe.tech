@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          # 选择要使用的 node 版本
+          # 使用 Node 22（项目原配置）
           node-version: 22
           # 缓存 pnpm 依赖
           cache: pnpm
