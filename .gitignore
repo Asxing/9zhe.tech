@@ -7,7 +7,7 @@ yarn-error.log*
 # Lock files (keep package-lock.json for consistency)
 # package-lock.json
 yarn.lock
-pnpm-lock.yaml
+# pnpm-lock.yaml
 
 # Runtime data
 pids
