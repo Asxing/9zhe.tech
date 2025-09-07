@@ -28,13 +28,13 @@ export default defineUserConfig({
       },
       postList: true,
       tags: true,
-      link: '/blog/'
+      link: '/' // 🔧 修复：博客文章显示在首页
     },
 
     // 配置 notes 以支持技术文档导航
     notes: {
       dir: '/notes/', // 笔记保存目录
-      link: '/', // 笔记链接前缀
+      link: '/notes/', // 🔧 修复：避免与博客首页冲突
       notes: [
         {
           dir: 'ai/claude',
