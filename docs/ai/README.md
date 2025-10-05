@@ -8,4 +8,5 @@ title: AI技术
 
 - 子栏目：
   - [Claude](/ai/claude/)
+  - [大模型基础](/ai/foundations-of-llms/)
 

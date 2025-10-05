@@ -44,7 +44,8 @@ export default defineUserConfig({
         text: 'AI技术',
         link: '/ai/',
         children: [
-          { text: 'Claude', link: '/ai/claude/' }
+          { text: 'Claude', link: '/ai/claude/' },
+          { text: '大模型基础', link: '/ai/foundations-of-llms/' }
         ]
       },
       {
